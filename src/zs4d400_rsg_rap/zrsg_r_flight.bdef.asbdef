@@ -1,0 +1,61 @@
+managed implementation in class ZBP_RSG_Flight unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZRSG_R_Flight alias Flight
+persistent table ZRSGAFLGT
+draft table ZRSGDFLGT
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+
+  field ( mandatory : create )
+   CarrierId,
+   ConnectionId,
+   FlightDate;
+
+  field ( readonly )
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   CarrierId,
+   ConnectionId,
+   FlightDate;
+
+  create;
+  update;
+  delete;
+
+  validation validatePrice on save { create; field Price; }
+
+  validation validateCurrencyCode on save { create; field CurrencyCode; }
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZRSGAFLGT
+  {
+    CarrierId = carrier_id;
+    ConnectionId = connection_id;
+    FlightDate = flight_date;
+    Price = price;
+    CurrencyCode = currency_code;
+    PlaneTypeId = plane_type_id;
+    LocalCreatedBy = local_created_by;
+    LocalCreatedAt = local_created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+  }
+
+//  determination getCities on save { field airportfrom, airportto; }
+}

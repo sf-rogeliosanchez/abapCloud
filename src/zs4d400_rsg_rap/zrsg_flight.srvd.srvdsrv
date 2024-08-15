@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZRSG_C_Flight'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZRSG_C_Flight'
+  }
+}
+define service ZRSG_Flight provider contracts odata_v4_ui {
+  expose ZRSG_C_FLIGHT as Flight;
+}

@@ -1,0 +1,157 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'CarrierId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'CarrierId'
+annotate view ZRSG_C_Flight with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Airline ID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Airline ID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  CarrierId;
+  
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Flight Number'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Flight Number'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  ConnectionId;
+  
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Flight Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Flight Date'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  FlightDate;
+  
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Flight Price'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Flight Price'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Price;
+  
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Currency Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Currency Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  CurrencyCode;
+  
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Plane Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Plane Type'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  PlaneTypeId;
+  
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Created By'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Created By'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  LocalCreatedBy;
+  
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Created On'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Created On'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  LocalCreatedAt;
+  
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Changed By'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Changed By'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  LocalLastChangedBy;
+  
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  LocalLastChangedAt;
+  
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  LastChangedAt;
+}
